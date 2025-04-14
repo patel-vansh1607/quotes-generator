@@ -7,7 +7,7 @@ const Quote = () => {
     const fetchApi = () =>{
         fetch('https://dummyjson.com/quotes')
         .then((res) => res.json())
-            .then((data) => setQuote(data.quotes[0].quote)); // Accessing a single quote
+            .then((data) => setQuote(data.quotes[0].quote)); 
     }
     return(
         <div className="main-div">
