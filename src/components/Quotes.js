@@ -5,7 +5,7 @@ const Quote = () => {
   const [isLoading, setIsLoading] = useState(false); 
 
   const fetchApi = async () => {
-    setIsLoading(true); // Set loading to true before fetching
+    setIsLoading(true); 
 
     try {
       const response = await fetch("https://dummyjson.com/quotes");
@@ -22,9 +22,9 @@ const Quote = () => {
     <div className="main-div">
       <div className="quotes">
         {isLoading ? (
-          <p>Loading...</p> 
+          <p>Loading...</p> // Display loading message
         ) : (
-          <p>{quote}</p> /
+          <p>{quote}</p> // Display quote when loaded
         )}
         <button onClick={fetchApi} disabled={isLoading}>
           {isLoading ? "Getting Quote..." : "Get Quote"}
